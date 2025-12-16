@@ -5,8 +5,13 @@ def ask_for_age():
     Если возраст больше или равен 18, выведите "Вы совершеннолетний".
     В противном случае — "Вы несовершеннолетний".
     """
-    # TODO: Напишите ваш код здесь
-    pass
+    age = int(input('Напишите сколько вам лет: '))
+    if age >= 18:
+        print('Вы совершеннолетний')
+    else:
+        print('Вы несовершеннолетний')
+
+    # тут выдает мне ошибку из-за "age >= 18", типа нельзя сравнивать строку и числа, если будет время потыкай.
 
 def check_password():
     """
@@ -15,8 +20,16 @@ def check_password():
     Если введенный пароль равен "secret", выведите "Пароль верный".
     Иначе — "Пароль неверный".
     """
-    # TODO: Напишите ваш код здесь
-    pass
+    password = input('Введите пароль: ')
+    if password == 'secret':
+        print('Пароль верный')
+    elif password != 'secret':
+        print('Пароль неверный')
+    elif password == int:
+        print('Пароль неверный')
+    else:
+        print('Введите пароль заново')
+
 
 def check_temperature():
     """
@@ -26,8 +39,17 @@ def check_temperature():
     - Если температура от 15 до 25 (включительно), выведите "Тепло".
     - Если температура выше 25, выведите "Жарко".
     """
-    # TODO: Напишите ваш код здесь
-    pass
+    weather_temperature = int(input("Какая погода сейчас в Алматы: "))
+
+    if weather_temperature < 15:
+        print('Холодно')
+    elif 15 <= weather_temperature <= 25:
+        print('Тепло')
+    elif weather_temperature >= 26:
+        print('Жарко')
+    else:
+        pass
+
 
 def check_login_and_password():
     """
@@ -36,8 +58,17 @@ def check_login_and_password():
     Если логин "admin" И пароль "password123", выведите "Доступ разрешен".
     В противном случае — "Доступ запрещен".
     """
-    # TODO: Напишите ваш код здесь
-    pass
+
+    login = str(input('Введите логин: '))
+    password = input('Введите пароль: ')
+
+
+    if login == 'admin' and password == 'password123':
+        print('Доступ разрешен')
+    elif login != 'admin' and password != 'password123':
+        print('Доступ запрещен')
+    else:
+        print('Доступ запрещен')
 
 if __name__ == '__main__':
     ask_for_age()
